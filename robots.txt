@@ -1,0 +1,17 @@
+# robots.txt for Biblia Para Mujeres
+# This file tells search engines which pages to crawl
+
+# Allow all search engines to crawl all content
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://bibliaparamujeres.netlify.app/sitemap.xml
+
+# Block access to system files (if any exist)
+Disallow: /.git/
+Disallow: /node_modules/
+Disallow: /.DS_Store
+
+# Crawl-delay (optional, prevents server overload)
+# Crawl-delay: 1
