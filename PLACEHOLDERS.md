@@ -14,11 +14,12 @@ https://apps.apple.com/app/id1234567890
 ```
 
 **Locations in index.html:**
-- **Line 70:** Structured Data (JSON-LD) - `downloadUrl` field
-- **Line 92:** Spanish Hero Section - Primary CTA button
-- **Line 208:** Spanish CTA Section - Download button
-- **Line 246:** English Hero Section - Primary CTA button
-- **Line 355:** English CTA Section - Download button
+Search for `{{APP_STORE_URL}}` and you'll find it in:
+- **Line ~75:** Structured Data (JSON-LD) - `downloadUrl` field
+- **Line ~100:** Arabic Hero Section - Primary CTA button
+- **Line ~204:** Arabic CTA Section - Download button
+- **Line ~259:** English Hero Section - Primary CTA button
+- **Line ~363:** English CTA Section - Download button
 
 **Total: 5 occurrences**
 
@@ -32,7 +33,7 @@ Replace this with your Apple App Store ID (numbers only).
 ```
 
 **Locations in index.html:**
-- **Line 36:** Apple Smart App Banner meta tag
+- **Line ~39:** Apple Smart App Banner meta tag
 
 **Total: 1 occurrence**
 
@@ -96,9 +97,26 @@ After replacing, verify:
 - [ ] All 5 CTA buttons link to the correct App Store URL
 - [ ] The Smart App Banner has the correct App ID
 - [ ] The structured data (JSON-LD) has the correct download URL
-- [ ] Open the page in a browser and click the "Descargar en App Store" button
+- [ ] Open the page in a browser and click the download buttons (Arabic & English)
 - [ ] Test on iOS device to see if Smart App Banner appears
 - [ ] Run Lighthouse audit to verify everything works
+- [ ] Test both Arabic and English versions
+
+---
+
+## Language-Specific Testing
+
+### Test Arabic Version (Default)
+1. Open the site
+2. Should default to Arabic with RTL layout
+3. Click "تحميل من App Store" button
+4. Should redirect to App Store
+
+### Test English Version
+1. Click "EN" button in language toggle
+2. Layout should flip to LTR
+3. Click "Download on App Store" button
+4. Should redirect to App Store
 
 ---
 

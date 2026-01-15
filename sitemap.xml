@@ -2,9 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-    <!-- Main page (Spanish primary) -->
+    <!-- Main page (Arabic primary) -->
     <url>
-        <loc>https://bibliaparamujeres.netlify.app/</loc>
+        <loc>https://aya-quranforwomen.netlify.app/</loc>
         <lastmod>2026-01-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
@@ -12,16 +12,16 @@
         <!-- Alternate language versions -->
         <xhtml:link
             rel="alternate"
-            hreflang="es"
-            href="https://bibliaparamujeres.netlify.app/" />
+            hreflang="ar"
+            href="https://aya-quranforwomen.netlify.app/" />
         <xhtml:link
             rel="alternate"
             hreflang="en"
-            href="https://bibliaparamujeres.netlify.app/" />
+            href="https://aya-quranforwomen.netlify.app/" />
         <xhtml:link
             rel="alternate"
             hreflang="x-default"
-            href="https://bibliaparamujeres.netlify.app/" />
+            href="https://aya-quranforwomen.netlify.app/" />
     </url>
 
 </urlset>

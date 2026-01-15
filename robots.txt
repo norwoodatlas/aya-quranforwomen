@@ -1,4 +1,4 @@
-# robots.txt for Biblia Para Mujeres
+# robots.txt for Aya – Qur'an for Women
 # This file tells search engines which pages to crawl
 
 # Allow all search engines to crawl all content
@@ -6,7 +6,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://bibliaparamujeres.netlify.app/sitemap.xml
+Sitemap: https://aya-quranforwomen.netlify.app/sitemap.xml
 
 # Block access to system files (if any exist)
 Disallow: /.git/

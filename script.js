@@ -1,13 +1,13 @@
 /**
- * Biblia Para Mujeres - Language Toggle Script
- * Minimal vanilla JavaScript for switching between Spanish and English
+ * Aya – Qur'an for Women - Language Toggle Script
+ * Minimal vanilla JavaScript with RTL support for Arabic
  */
 
 (function() {
     'use strict';
 
-    // Get language preference from localStorage or default to Spanish
-    const savedLang = localStorage.getItem('language') || 'es';
+    // Get language preference from localStorage or default to Arabic
+    const savedLang = localStorage.getItem('language') || 'ar';
     let currentLang = savedLang;
 
     // Get DOM elements
@@ -16,7 +16,7 @@
 
     /**
      * Switch to specified language
-     * @param {string} lang - Language code ('es' or 'en')
+     * @param {string} lang - Language code ('ar' or 'en')
      */
     function switchLanguage(lang) {
         if (lang === currentLang) return;
@@ -45,18 +45,20 @@
             }
         });
 
-        // Update HTML lang attribute for SEO and accessibility
-        document.documentElement.setAttribute('lang', lang === 'es' ? 'es' : 'en');
+        // Update HTML lang and dir attributes for RTL support
+        const htmlEl = document.documentElement;
+        if (lang === 'ar') {
+            htmlEl.setAttribute('lang', 'ar');
+            htmlEl.setAttribute('dir', 'rtl');
+            document.title = 'آية – القرآن للنساء | Aya – Qur\'an for Women';
+        } else {
+            htmlEl.setAttribute('lang', 'en');
+            htmlEl.setAttribute('dir', 'ltr');
+            document.title = 'Aya – Qur\'an for Women | Daily Islamic Devotional App';
+        }
 
         // Save preference to localStorage
         localStorage.setItem('language', lang);
-
-        // Update page title based on language
-        if (lang === 'en') {
-            document.title = 'Bible For Women - Daily Christian Devotional for Women | iOS App';
-        } else {
-            document.title = 'Biblia Para Mujeres - Devocional Diario Cristiano para Mujeres | App iOS';
-        }
     }
 
     /**
