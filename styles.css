@@ -125,7 +125,7 @@ button {
 .language-toggle {
     position: fixed;
     top: var(--spacing-sm);
-    right: var(--spacing-sm);
+    left: var(--spacing-sm);
     z-index: 1000;
     background: var(--bg-white);
     border-radius: 100px;
@@ -133,11 +133,6 @@ button {
     box-shadow: var(--shadow-md);
     display: flex;
     gap: 4px;
-}
-
-[dir="rtl"] .language-toggle {
-    right: auto;
-    left: var(--spacing-sm);
 }
 
 .lang-btn {
