@@ -1,14 +1,11 @@
 /**
- * Aya – Qur'an for Women - Simplified Language Toggle
+ * Aya – Qur'an for Women - Language Toggle
  */
 
-(function() {
-    'use strict';
-
+document.addEventListener('DOMContentLoaded', function() {
     let currentLang = localStorage.getItem('language') || 'ar';
 
     function switchLanguage(lang) {
-        if (lang === currentLang) return;
         currentLang = lang;
 
         // Update HTML attributes
@@ -16,24 +13,34 @@
         document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
 
         // Update content visibility
-        document.querySelectorAll('.content').forEach(section => {
-            section.classList.toggle('hidden', section.dataset.lang !== lang);
+        document.querySelectorAll('.content').forEach(function(section) {
+            if (section.dataset.lang === lang) {
+                section.classList.remove('hidden');
+            } else {
+                section.classList.add('hidden');
+            }
         });
 
         // Update button states
-        document.querySelectorAll('.lang-btn').forEach(btn => {
-            btn.classList.toggle('active', btn.dataset.lang === lang);
+        document.querySelectorAll('.lang-btn').forEach(function(btn) {
+            if (btn.dataset.lang === lang) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
         });
 
         // Save preference
         localStorage.setItem('language', lang);
     }
 
-    // Initialize on load
+    // Initialize with saved or default language
     switchLanguage(currentLang);
 
-    // Add click handlers
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.onclick = () => switchLanguage(btn.dataset.lang);
+    // Add click handlers to buttons
+    document.querySelectorAll('.lang-btn').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            switchLanguage(this.dataset.lang);
+        });
     });
-})();
+});
