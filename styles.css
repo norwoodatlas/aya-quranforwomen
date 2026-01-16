@@ -477,6 +477,22 @@ button {
     font-style: italic;
 }
 
+.footer-links {
+    font-size: 0.875rem;
+    color: var(--text-medium);
+    margin-top: var(--spacing-sm);
+}
+
+.footer-links a {
+    color: var(--primary-olive);
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--primary-olive-hover);
+    text-decoration: underline;
+}
+
 /* ===================================
    RESPONSIVE - TABLET (768px+)
    =================================== */
